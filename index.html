@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Bank</title>
+    <script src="https://kit.fontawesome.com/8524528753.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="bg-slate-300">
+    <header>
+        <h1 class="text-5xl text-center mt-4">Functional<span class="bg-black px-1 rounded ml-2"><span class="text-white font-bold">T</span><span class="text-white font-bold">S</span></span></span></span> Bank</span>!!!</h1>
+    </header>
+    <main>
+        <!-- balance and transaction summary -->
+        <section class="mt-8 text-center">
+            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-black">
+                <div class="bg-slate-100 p-8 rounded-lg">
+                    <h4 class="text-3xl">Deposit</h4>
+                    <h2 class="text-5xl font-medium">$<span id="deposit-total">00</span></h2>
+                </div>
+                <div class="bg-slate-100	 p-8 rounded-lg">
+                    <h4 class="text-3xl">Withdraw</h4>
+                    <h2 class="text-5xl font-medium">$<span id="withdraw-total">00</span></h2>
+                </div>
+                <div class="bg-slate-100	 p-8 rounded-lg">
+                    <h4 class="text-3xl">Balance</h4>
+                    <h2 class="text-5xl font-medium">$<span id="balance-total">10000</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- deposit and Withdraw section -->
+        <section class="mt-8 w-3/4 mx-auto">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-slate-100	 p-8 rounded-lg flex flex-col items-center justify-center h-full">
+                    <h3 class="text-4xl text-black mb-4 text-center">Your Deposit</h3>
+                    <input id="deposit-field" class="bg-transparent w-3/4 px-4 py-3 rounded block border-b-4 border-black outline-none	text-center  mx-auto" type="text"
+                        placeholder="$ Amount  you want to deposit" onkeyup="updateParagraph('deposit-field')" ;>
+                    <p id="p-tag" class="text-red-600 mb-2  rounded-xl text-center mb-2 mt-4 mx-auto">
+                    </p>
+                    <button id="btn-deposit"
+                        class="bg-black px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-white hover:text-black hover:outline
+                        hover:outline-2 hover:outline-black">Deposit</button>
+                </div>
+                <div class="bg-slate-100	 p-8 rounded-lg flex flex-col items-center justify-center h-full">
+                    <h3 class="text-4xl text-black mb-4">Your Withdraw</h3>
+                    <input id="withdraw-field" class="bg-transparent w-3/4 px-4 py-3 rounded block border-b-4 border-black outline-none	text-center" type="text"
+                        placeholder="$ Amount  you want to deposit" onkeyup="updateParagraph('withdraw-field')" ;>
+                    <p id="p-tag2" class="text-red-600 mb-2 mt-4 	rounded-xl text-center mx-auto"></p>
+                    <button id="btn-withdraw"
+                        class="bg-black px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-white hover:text-black hover:outline
+                        hover:outline-2 hover:outline-black">Withdraw</button>
+                </div>
+            </div>
+        </section>
+            <a href="shop.html"><div class="index-btn">
+                <i class="fa-sharp fa-solid fa-cart-shopping fa-2x icon-white pl-5"></i> <span class="p-span">Start Shopping</span>
+            </div></a>
+    
+    </main>
+    <script src="js/function.js"></script>
+    <script src="js/Deposit.js"></script>
+    <script src="js/Withdraw.js"></script>
+</body>
+
+</html>
